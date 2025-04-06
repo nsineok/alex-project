@@ -5,6 +5,14 @@
  */
 $settings['container_yamls'][] = __DIR__ . '/services.yml';
 
+$config_directories['sync'] = '../config/default';
+if (defined('CONFIG_SYNC_DIRECTORY') && empty($config_directories[CONFIG_SYNC_DIRECTORY])) {
+  $config_directories[CONFIG_SYNC_DIRECTORY] = '../config/default';
+}
+elseif (empty($settings['config_sync_directory'])) {
+  $settings['config_sync_directory'] = '../config/default';
+}
+
 /**
  * Include the Pantheon-specific settings file.
  *
