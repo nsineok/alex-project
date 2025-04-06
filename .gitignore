@@ -95,3 +95,11 @@
 
 # Ignore .env files as they are personal
 #/.env
+
+# ------------
+# - JetBrains
+# ------------
+
+.idea/
+.idea_modules/
+*.iws
